@@ -39,7 +39,7 @@ async function getParticipatingList(req, res) {
 async function deleteParticipating(req, res) {
   User.findOne({ email: req.body.email }).then((user) => {
     const newList = user.participatingList.filter((participating) => {
-      if (participating.id !== req.body.id) {
+      if (participating._id !== req.body._id) {
         return participating;
       }
     });
