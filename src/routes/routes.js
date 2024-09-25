@@ -39,7 +39,7 @@ router.post("/register", register);
 
 router.post("/forgot_password", forgot_password);
 
-router.post("/editperfil", upload.single("picture"), confirmEdit);
+router.post("/editperfil", upload.single("picture"), confirmEdit.confirmEdit);
 
 router.get("/events", findEvent.findEvents);
 
