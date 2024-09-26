@@ -3,7 +3,7 @@ const User = require("../../models/User");
 async function confirmEdit(req, res) {
   const { name, userName, phone, email, _id } = req.body;
   const picture = req.file?.filename;
-  
+  console.log(req.body)
   const user = await User.updateOne(
     { _id: _id },
     { $set: { name, userName, phone, picture, email } }

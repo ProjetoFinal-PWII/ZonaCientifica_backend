@@ -42,6 +42,8 @@ app.use("/registercard", router);
 
 app.use("/posts", router);
 
+app.use('/uploads', express.static('uploads'));
+
 //Identificado porta 3000
 app.listen(port, () => {
   console.log(`Servidor rodando no endereço http://localhost:${port}`);
